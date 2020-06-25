@@ -1,0 +1,25 @@
+/*! This fix fixes the .repohead stretching across the entire screen
+ * and constraints it to the main page column width. */
+
+.repohead .d-flex:first-of-type {
+	max-width: 1280px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.repohead nav.js-repo-nav {
+	max-width: 1280px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.repohead .UnderlineNav {
+	/* Remove repohead bottom divider */
+	box-shadow: none;
+	background-color: transparent !important;
+}
+
+.repohead {
+	/* Add repohead bottom divider to repohead so it stretches across the entire screen */
+	box-shadow: inset 0 -1px 0 #e1e4e8;
+}
