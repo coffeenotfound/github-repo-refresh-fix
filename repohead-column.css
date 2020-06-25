@@ -1,5 +1,5 @@
 /*! This fix fixes the .repohead stretching across the entire screen
- * and constraints it to the main page column width. */
+ * and constrains it to the main page column width. */
 
 .repohead .d-flex:first-of-type {
 	max-width: 1280px !important;
