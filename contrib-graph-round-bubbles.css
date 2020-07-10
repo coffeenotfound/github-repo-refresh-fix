@@ -1,0 +1,15 @@
+/*! This fix changes the day bubbles in the contribution graph to be round. */
+
+.js-yearly-contributions, .calendar-graph {
+    --day-box-border-radius: 50%;
+}
+
+.calendar-graph rect.day {
+    outline: none;
+    rx: var(--day-box-border-radius);
+	ry: var(--day-box-border-radius);
+}
+
+.contrib-legend .legend li {
+    border-radius: var(--day-box-border-radius);
+}
