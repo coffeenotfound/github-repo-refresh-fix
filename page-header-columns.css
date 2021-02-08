@@ -1,12 +1,14 @@
 /*! This fix fixes the page header stretching across the entire screen
- * and constrains it to the main page column width. */
+ * and constrains it to the main page column width.
+ * Updated: 08.02.2021 */
 
+/* Make whole page wide nav section wrapper have the proper bg color */
 .js-header-wrapper {
-    background-color: #24292e;
+	background-color: var(--color-header-bg);
 }
 
+/* Clamp nav header width */
 .js-header-wrapper header {
     max-width: 1280px;
     margin: 0 auto;
-    background-color: transparent;
 }

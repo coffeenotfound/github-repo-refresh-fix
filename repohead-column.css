@@ -1,25 +1,24 @@
-/*! This fix fixes the .repohead stretching across the entire screen
- * and constrains it to the main page column width. */
-
-.repohead .d-flex:first-of-type {
+/*! This fix fixes the repo navbar stretching across the entire screen
+ * and constrains it to the main page column width.
+ * Updated: 08.02.2021 */
+ 
+/* Clamp both repo nav divs (repo name div and tab div (which contains `Code`, `Issues`, `Pull Requests?, etec.) */
+#js-repo-pjax-container > div:first-child > div:first-child {
 	max-width: 1280px !important;
-	margin-left: auto !important;
-	margin-right: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+#js-repo-pjax-container > div:first-child > nav.js-repo-nav {
+    max-width: 1280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+    /* Remove repohead bottom divider */
+    box-shadow: none;
+    background-color: transparent !important;
 }
 
-.repohead nav.js-repo-nav {
-	max-width: 1280px !important;
-	margin-left: auto !important;
-	margin-right: auto !important;
-}
-
-.repohead .UnderlineNav {
-	/* Remove repohead bottom divider */
-	box-shadow: none;
-	background-color: transparent !important;
-}
-
-.repohead {
-	/* Add repohead bottom divider to repohead so it stretches across the entire screen */
-	box-shadow: inset 0 -1px 0 #e1e4e8;
+#js-repo-pjax-container > div:first-child {
+    /* Add repohead bottom divider to repohead so it stretches across the entire screen */
+    box-shadow: inset 0 -1px 0 var(--color-border-secondary);
 }
